@@ -92,7 +92,7 @@
 		
 		scrollView.addEventListener('click', function(e){
 			Ti.API.info(e.source.imageUrl);
-			yahoo.ui.openPicDetailWin(e.source.imageUrl, e.source.placename, e.source.intro, e.source.tagid, e.source.isplay, nullf);
+			yahoo.ui.openPicDetailWin(e.source.imageUrl, e.source.placename, e.source.intro, e.source.tagid, e.source.isplay, null);
 		});
 		
 		var tableBg = Ti.UI.createView({
