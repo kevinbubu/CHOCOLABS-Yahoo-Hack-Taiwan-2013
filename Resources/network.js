@@ -23,6 +23,24 @@
 		xhr.send();
 	}
 	
+	yahoo.network.getData_no_indicator = function(url, callback) {
+		var xhr = Ti.Network.createHTTPClient({
+			timeout : 10000
+		});
+		xhr.onload = function() {
+			if (this.status == 200) {
+				var parsedData = JSON.parse(this.responseText);
+				callback(parsedData);
+			} else {
+				callback("error");
+			}
+		};
+		xhr.onerror = function(e) {
+			callback("error");
+		}
+		xhr.open('GET', url);
+		xhr.send();
+	}
 	
 	yahoo.network.getRdata = function(url, callback) {
 		var client = Ti.Network.createHTTPClient({
