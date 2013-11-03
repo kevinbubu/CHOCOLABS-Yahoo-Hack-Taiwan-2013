@@ -188,7 +188,8 @@
 					placename:scrollView.children[0].placename,
 					intro:scrollView.children[0].intro,
 					tagid:scrollView.children[0].tagid,
-					isplay:true
+					isplay:true,
+					opacity:0
 				});
 				var coverView2 = Ti.UI.createImageView({
 					image:'images/frame.png',
@@ -198,7 +199,8 @@
 					placename:scrollView.children[1].placename,
 					intro:scrollView.children[1].intro,
 					tagid:scrollView.children[1].tagid,
-					isplay:true
+					isplay:true,
+					opacity:0
 				});
 				var coverView3 = Ti.UI.createImageView({
 					image:'images/frame.png',
@@ -208,7 +210,8 @@
 					placename:scrollView.children[8].placename,
 					intro:scrollView.children[8].intro,
 					tagid:scrollView.children[8].tagid,
-					isplay:true
+					isplay:true,
+					opacity:0
 				});
 				var coverView4 = Ti.UI.createImageView({
 					image:'images/frame.png',
@@ -218,7 +221,8 @@
 					placename:scrollView.children[9].placename,
 					intro:scrollView.children[9].intro,
 					tagid:scrollView.children[9].tagid,
-					isplay:true
+					isplay:true,
+					opacity:0
 				});
 				var coverView5 = Ti.UI.createImageView({
 					image:'images/frame.png',
@@ -228,7 +232,8 @@
 					placename:scrollView.children[10].placename,
 					intro:scrollView.children[10].intro,
 					tagid:scrollView.children[10].tagid,
-					isplay:true
+					isplay:true,
+					opacity:0
 				});
 				var coverView6 = Ti.UI.createImageView({
 					image:'images/frame.png',
@@ -238,7 +243,8 @@
 					placename:scrollView.children[11].placename,
 					intro:scrollView.children[11].intro,
 					tagid:scrollView.children[11].tagid,
-					isplay:true
+					isplay:true,
+					opacity:0
 				});
 				var coverView7 = Ti.UI.createImageView({
 					image:'images/frame.png',
@@ -248,8 +254,10 @@
 					placename:scrollView.children[12].placename,
 					intro:scrollView.children[12].intro,
 					tagid:scrollView.children[12].tagid,
-					isplay:true
+					isplay:true,
+					opacity:0
 				});
+				
 				scrollView.children[0].add(coverView1);
 				scrollView.children[1].add(coverView2);
 				scrollView.children[8].add(coverView3);
@@ -258,6 +266,33 @@
 				scrollView.children[11].add(coverView6);
 				scrollView.children[12].add(coverView7);
 				Titanium.App.fireEvent('app:hide_indicator');
+				var a1 = Titanium.UI.createAnimation({duration:500, opacity:1});
+				var a2 = Titanium.UI.createAnimation({duration:500, opacity:1});
+				var a3 = Titanium.UI.createAnimation({duration:500, opacity:1});
+				var a4 = Titanium.UI.createAnimation({duration:500, opacity:1});
+				var a5 = Titanium.UI.createAnimation({duration:500, opacity:1});
+				var a6 = Titanium.UI.createAnimation({duration:500, opacity:1});
+				var a7 = Titanium.UI.createAnimation({duration:500, opacity:1});
+				coverView1.animate(a1);
+				
+				a1.addEventListener('complete', function(){
+					coverView2.animate(a2);
+				});
+				a2.addEventListener('complete', function(){
+					coverView3.animate(a3);
+				});
+				a3.addEventListener('complete', function(){
+					coverView4.animate(a4);
+				});
+				a4.addEventListener('complete', function(){
+					coverView5.animate(a5);
+				});
+				a5.addEventListener('complete', function(){
+					coverView6.animate(a6);
+				});
+				a6.addEventListener('complete', function(){
+					coverView7.animate(a7);
+				});
 				
 				sound.play();
 			}, 2000);
@@ -320,7 +355,8 @@
 							placename:scrollView.children[0].placename,
 							intro:scrollView.children[0].intro,
 							tagid:scrollView.children[0].tagid,
-							isplay:true
+							isplay:true,
+							opacity:0
 						});
 						var coverView2 = Ti.UI.createImageView({
 							image:'images/frame.png',
@@ -330,7 +366,8 @@
 							placename:scrollView.children[1].placename,
 							intro:scrollView.children[1].intro,
 							tagid:scrollView.children[1].tagid,
-							isplay:true
+							isplay:true,
+							opacity:0
 						});
 						var coverView3 = Ti.UI.createImageView({
 							image:'images/frame.png',
@@ -340,7 +377,8 @@
 							placename:scrollView.children[2].placename,
 							intro:scrollView.children[2].intro,
 							tagid:scrollView.children[2].tagid,
-							isplay:true
+							isplay:true,
+							opacity:0
 						});
 						var coverView4 = Ti.UI.createImageView({
 							image:'images/frame.png',
@@ -350,7 +388,8 @@
 							placename:scrollView.children[4].placename,
 							intro:scrollView.children[4].intro,
 							tagid:scrollView.children[4].tagid,
-							isplay:true
+							isplay:true,
+							opacity:0
 						});
 						var coverView5 = Ti.UI.createImageView({
 							image:'images/frame.png',
@@ -360,7 +399,8 @@
 							placename:scrollView.children[6].placename,
 							intro:scrollView.children[6].intro,
 							tagid:scrollView.children[6].tagid,
-							isplay:true
+							isplay:true,
+							opacity:0
 						});
 						var coverView6 = Ti.UI.createImageView({
 							image:'images/frame.png',
@@ -370,7 +410,8 @@
 							placename:scrollView.children[8].placename,
 							intro:scrollView.children[8].intro,
 							tagid:scrollView.children[8].tagid,
-							isplay:true
+							isplay:true,
+							opacity:0
 						});
 						var coverView7 = Ti.UI.createImageView({
 							image:'images/frame.png',
@@ -380,7 +421,8 @@
 							placename:scrollView.children[9].placename,
 							intro:scrollView.children[9].intro,
 							tagid:scrollView.children[9].tagid,
-							isplay:true
+							isplay:true,
+							opacity:0
 						});
 						scrollView.children[0].add(coverView1);
 						scrollView.children[1].add(coverView2);
@@ -389,6 +431,34 @@
 						scrollView.children[6].add(coverView5);
 						scrollView.children[8].add(coverView6);
 						scrollView.children[9].add(coverView7);
+						var a1 = Titanium.UI.createAnimation({duration:500, opacity:1});
+						var a2 = Titanium.UI.createAnimation({duration:500, opacity:1});
+						var a3 = Titanium.UI.createAnimation({duration:500, opacity:1});
+						var a4 = Titanium.UI.createAnimation({duration:500, opacity:1});
+						var a5 = Titanium.UI.createAnimation({duration:500, opacity:1});
+						var a6 = Titanium.UI.createAnimation({duration:500, opacity:1});
+						var a7 = Titanium.UI.createAnimation({duration:500, opacity:1});
+						coverView1.animate(a1);
+						
+						a1.addEventListener('complete', function(){
+							coverView2.animate(a2);
+						});
+						a2.addEventListener('complete', function(){
+							coverView3.animate(a3);
+						});
+						a3.addEventListener('complete', function(){
+							coverView4.animate(a4);
+						});
+						a4.addEventListener('complete', function(){
+							coverView5.animate(a5);
+						});
+						a5.addEventListener('complete', function(){
+							coverView6.animate(a6);
+						});
+						a6.addEventListener('complete', function(){
+							coverView7.animate(a7);
+						});
+						
 						yahoo.temp.push(coverView1);
 						yahoo.temp.push(coverView2);
 						yahoo.temp.push(coverView3);
